@@ -2,12 +2,7 @@
 session_start();
 require_once "../config/db.php";
 
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit();
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = intval($_POST['id']);
 
     $sql = "DELETE FROM products WHERE id = ?";
@@ -15,10 +10,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
     $stmt->bind_param("i", $id);
 
     if ($stmt->execute()) {
-        header("Location: dashboard.php");
-        exit();
+        header("Location: dashboard.php?status=success&msg=Produto excluído com sucesso!");
     } else {
-        echo "Erro ao excluir produto.";
+        header("Location: dashboard.php?status=error&msg=Erro ao excluir produto.");
     }
+
+    $stmt->close();
+    $conn->close();
 }
-?>

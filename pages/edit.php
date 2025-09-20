@@ -1,20 +1,23 @@
 <?php
+session_start();
 require_once "../config/db.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST['id'];
-    $name = $_POST['name'];
-    $quantity = $_POST['quantity'];
-    $price = $_POST['price'];
+    $id = intval($_POST['id']);
+    $name = trim($_POST['name']);
+    $quantity = intval($_POST['quantity']);
+    $price = floatval($_POST['price']);
 
-    $sql = "UPDATE products SET name=?, quantity=?, price=? WHERE id=?";
+    $sql = "UPDATE products SET name = ?, quantity = ?, price = ? WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sidi", $name, $quantity, $price, $id);
 
     if ($stmt->execute()) {
-        header("Location: dashboard.php");
+        header("Location: dashboard.php?status=success&msg=Produto atualizado com sucesso!");
     } else {
-        echo "Erro ao editar produto.";
+        header("Location: dashboard.php?status=error&msg=Erro ao atualizar produto.");
     }
+
+    $stmt->close();
+    $conn->close();
 }
-?>
