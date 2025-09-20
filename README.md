@@ -55,7 +55,7 @@ estoque/
 ## 🔑 Credenciais de Acesso (iniciais)
 
 - Email: admin@email.com
-- Senha: admin
+- Senha: 1234
 
 ## 👨‍💻 Autor
 
