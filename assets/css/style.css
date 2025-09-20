@@ -1,0 +1,268 @@
+/* ==========================
+   Reset básico
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f6fa;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ==========================
+   Header
+========================== */
+.header {
+  background: #e1e5e6;
+  color: #000;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 20px;
+}
+
+.logout-btn {
+  color: #fff;
+  text-decoration: none;
+  background: #e74c3c;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+/* ==========================
+   Container principal
+========================== */
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.container h3 {
+  margin-bottom: 15px;
+}
+
+/* ==========================
+   Botões
+========================== */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+/* Botão primário */
+.btn-primary {
+  background: #0ea5a4;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #086363;
+}
+
+/* Botão secundário */
+.btn-secondary {
+  background: #7f8c8d;
+  color: #fff;
+  margin-left: 8px;
+}
+.btn-secondary:hover {
+  background: #636e72;
+}
+
+/* Botão de perigo */
+.btn-danger {
+  font-weight: 700;
+  background: #e1e5e6;
+  color: #c0392b;
+}
+.btn-danger:hover {
+  background: #c0392b;
+  color: #ccc;
+}
+
+.login-btn {
+  width: 100%;
+}
+
+/* ==========================
+   Links
+========================== */
+.link {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link-danger {
+  color: #e74c3c;
+  text-decoration: none;
+}
+
+.link-danger:hover {
+  text-decoration: underline;
+}
+
+/* ==========================
+   Tabelas
+========================== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.table th {
+  background: #ecf0f1;
+  font-weight: bold;
+}
+
+.table tr:hover {
+  background: #f9f9f9;
+}
+
+.text-center {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+}
+
+/* ==========================
+   Login
+========================== */
+.login-container {
+  width: 350px;
+  margin: 100px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  display: block;
+  margin: 0 0 5px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.error-msg {
+  color: #70251d;
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ==========================
+   Modais
+========================== */
+.modal {
+  display: none; /* oculto por padrão */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-bottom: 15px;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 10px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modal-btn {
+  padding-top: 20px;
+}
+
+.warning-text {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ==========================
+   Responsividade
+========================== */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .login-container {
+    width: 90%;
+    margin: 60px auto;
+  }
+}
