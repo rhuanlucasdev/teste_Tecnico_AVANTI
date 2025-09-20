@@ -28,7 +28,7 @@ O objetivo é demonstrar habilidades em **desenvolvimento web full-stack**, inte
 ---
 
 ## 📂 Estrutura de Pastas
-
+```
 estoque/
 │── assets/
 │ ├── css/
@@ -51,7 +51,7 @@ estoque/
 │
 │── index.php
 │── README.md
-
+```
 ## 🔑 Credenciais de Acesso (iniciais)
 
 - Email: admin@email.com
